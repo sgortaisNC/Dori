@@ -3,7 +3,7 @@ import {FormTodo} from "@/components/FormTodo/FormTodo";
 
 
 async function getData() {
-    const todos = await fetch(`${process.env.VERCEL_URL}/api/todo`,{
+    const todos = await fetch(`https://dori-ten.vercel.app/api/todo`,{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
