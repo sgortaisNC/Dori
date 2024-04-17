@@ -19,7 +19,7 @@ async function addTodo(e) {
 export function FormTodo() {
     return (
         <form onSubmit={addTodo}>
-            <input type="text" name={"task"}/>
+            <input type="text" autoComplete={"off"} name={"task"}/>
             <button type={"submit"}>Ajouter</button>
         </form>
     );
