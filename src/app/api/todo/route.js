@@ -10,3 +10,8 @@ export async function POST(request) {
     });
     return NextResponse.json(bdd);
 }
+
+export async function GET(request) {
+    const bdd = await prisma.todo.findMany();
+    return NextResponse.json(bdd);
+}

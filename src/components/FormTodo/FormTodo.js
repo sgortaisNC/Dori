@@ -3,7 +3,7 @@
 async function addTodo(e) {
     e.preventDefault();
     const task = e.target.task.value;
-    await fetch('/api/todo/add', {
+    await fetch('/api/todo', {
         method: 'POST',
         body: JSON.stringify({
             task: task,
