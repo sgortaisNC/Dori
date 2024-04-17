@@ -1,15 +1,10 @@
 import styles from "./page.module.css";
 import {FormTodo} from "@/components/FormTodo/FormTodo";
+import prisma from "@/lib/prisma";
 
 
 async function getData() {
-    const todos = await fetch(`https://dori-ten.vercel.app/api/todo`,{
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    return await todos.json();
+    return await prisma.todo.findMany();
 }
 
 
